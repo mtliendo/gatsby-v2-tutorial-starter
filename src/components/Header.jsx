@@ -59,7 +59,12 @@ export default Header
 
 Header.propTypes = {
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.bool]),
-  cover: PropTypes.oneOfType([PropTypes.object, PropTypes.bool]),
+  cover: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.bool,
+    PropTypes.array,
+    PropTypes.string,
+  ]),
   title: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object,
