@@ -11,7 +11,7 @@ exports.createPages = ({ graphql, actions }) => {
         `
           query {
             allMarkdownRemark(
-              sort: { order: ASC, fields: [frontmatter___date] }
+              sort: { order: ASC, fields: [frontmatter___id] }
             ) {
               edges {
                 node {
@@ -24,7 +24,7 @@ exports.createPages = ({ graphql, actions }) => {
             }
           }
         `
-      ).then(result => {
+      ).then((result) => {
         if (result.errors) {
           return reject(result.errors)
         }

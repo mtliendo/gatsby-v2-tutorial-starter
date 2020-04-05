@@ -10,8 +10,8 @@ const SuggestionBar = styled.div`
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
-  background: ${props => props.theme.colors.white.light};
-  box-shadow: ${props => props.theme.shadow.suggestion};
+  background: ${(props) => props.theme.colors.white.light};
+  box-shadow: ${(props) => props.theme.shadow.suggestion};
   @media (max-width: 600px) {
     h3 {
       font-size: 1rem;
@@ -27,7 +27,7 @@ const PostSuggestion = styled.div`
 const Post = ({ data, pageContext }) => {
   const { next, prev } = pageContext
   const { html, frontmatter, excerpt } = data.markdownRemark
-  const { date, title, path, description } = frontmatter
+  const { title, path, description } = frontmatter
   const image = frontmatter.cover.childImageSharp.fluid
 
   return (
@@ -39,7 +39,7 @@ const Post = ({ data, pageContext }) => {
         pathname={path}
         article
       />
-      <Header title={title} date={date} cover={image} />
+      <Header title={title} cover={image} />
       <Container>
         <Content input={html} />
       </Container>
@@ -80,7 +80,6 @@ export const query = graphql`
     markdownRemark(frontmatter: { path: { eq: $pathSlug } }) {
       html
       frontmatter {
-        date
         title
         cover {
           childImageSharp {

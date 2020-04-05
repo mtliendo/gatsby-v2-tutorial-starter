@@ -28,15 +28,14 @@ const Index = ({ data }) => {
       <Header title={data.site.siteMetadata.title}>Beginner Track</Header>
       <PostWrapper>
         {edges.map(({ node }) => {
-          const { id, excerpt, frontmatter } = node
-          const { cover, path, title, date } = frontmatter
+          const { excerpt, frontmatter } = node
+          const { cover, path, title, id } = frontmatter
           return (
             <PostList
               key={id}
               cover={cover.childImageSharp.fluid}
               path={path}
               title={title}
-              date={date}
               excerpt={excerpt}
             />
           )
@@ -59,7 +58,7 @@ Index.propTypes = {
               cover: PropTypes.object.isRequired,
               path: PropTypes.string.isRequired,
               title: PropTypes.string.isRequired,
-              date: PropTypes.string.isRequired,
+              id: PropTypes.number.isRequired,
             }),
           }),
         }).isRequired
@@ -77,16 +76,16 @@ export const query = graphql`
     }
     allMarkdownRemark(
       limit: 6
-      sort: { order: ASC, fields: [frontmatter___date] }
+      sort: { order: ASC, fields: [frontmatter___id] }
     ) {
       edges {
         node {
           id
           excerpt(pruneLength: 75)
           frontmatter {
+            id
             title
             path
-            date(formatString: "MM.DD.YYYY")
             cover {
               childImageSharp {
                 fluid(maxWidth: 1000, quality: 90) {

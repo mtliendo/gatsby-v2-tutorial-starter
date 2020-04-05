@@ -17,8 +17,6 @@
     "clean": "rm -rf public && rm -rf .cache",
     "format-output": "prettier src/**/*.{js,jsx}",
     "format": "prettier --write src/**/*.{js,jsx}",
-    "lint-errors": "eslint src/**/*.{js,jsx} --quiet",
-    "lint": "eslint src/**/*.{js,jsx}",
     "start": "npm run develop"
   },
   "dependencies": {
@@ -56,9 +54,11 @@
     "typography": "^0.16.19"
   },
   "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.8.0",
     "gh-pages": "^2.2.0",
-    "lighthouse": "^3.2.1",
-    "prettier": "^1.18.2"
+    "lighthouse": "^5.6.0",
+    "prettier": "^2.0.2"
   },
   "keywords": [
     "justin formentin",
