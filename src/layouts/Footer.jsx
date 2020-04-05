@@ -1,5 +1,6 @@
-import React from 'react';
-import styled from '@emotion/styled';
+import React from 'react'
+import styled from '@emotion/styled'
+import { useStaticQuery, graphql } from 'gatsby'
 
 const Wrapper = styled.footer`
   position: relative;
@@ -12,23 +13,39 @@ const Wrapper = styled.footer`
   @media (max-width: ${props => props.theme.breakpoints.s}) {
     padding-top: 7rem;
   }
-`;
+`
 
 const Text = styled.div`
   margin: 0;
   padding-bottom: 2rem;
   text-align: center;
   color: ${props => props.theme.colors.white.light};
-`;
+`
 
-const Footer = () => (
-  <Wrapper>
-    <Text>
-      <span>
-        Gatsby Tutorial Starter -{' '}
-        <a href="https://justinformentin.com">Justin Formentin</a>
-      </span>
-    </Text>
-  </Wrapper>
-);
-export default Footer;
+const Footer = () => {
+  const {
+    site: { siteMetadata },
+  } = useStaticQuery(graphql`
+    {
+      site {
+        siteMetadata {
+          title
+          twitterUrl
+          author
+        }
+      }
+    }
+  `)
+
+  return (
+    <Wrapper>
+      <Text>
+        <span>
+          {siteMetadata.title} -{' '}
+          <a href={siteMetadata.twitterUrl}>{siteMetadata.author}</a>
+        </span>
+      </Text>
+    </Wrapper>
+  )
+}
+export default Footer

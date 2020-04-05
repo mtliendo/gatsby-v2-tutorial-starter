@@ -1,12 +1,12 @@
-import React from 'react';
-import { graphql } from 'gatsby';
-import PropTypes from 'prop-types';
-import Helmet from 'react-helmet';
-import styled from '@emotion/styled';
-import { Header, PostList } from 'components';
-import { Layout } from 'layouts';
+import React from 'react'
+import { graphql } from 'gatsby'
+import PropTypes from 'prop-types'
+import Helmet from 'react-helmet'
+import styled from '@emotion/styled'
+import { Header, PostList } from 'components'
+import { Layout } from 'layouts'
 
-const PostWrapper = styled.div`
+const PostWrapper = styled.section`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -18,18 +18,18 @@ const PostWrapper = styled.div`
   @media (max-width: 700px) {
     margin: 4rem 1rem 1rem 1rem;
   }
-`;
+`
 
 const Index = ({ data }) => {
-  const { edges } = data.allMarkdownRemark;
+  const { edges } = data.allMarkdownRemark
   return (
     <Layout>
-      <Helmet title={'Home Page'} />
-      <Header title="Home Page">Gatsby Tutorial Starter</Header>
+      <Helmet title={data.site.siteMetadata.title} />
+      <Header title={data.site.siteMetadata.title}>Beginner Track</Header>
       <PostWrapper>
         {edges.map(({ node }) => {
-          const { id, excerpt, frontmatter } = node;
-          const { cover, path, title, date } = frontmatter;
+          const { id, excerpt, frontmatter } = node
+          const { cover, path, title, date } = frontmatter
           return (
             <PostList
               key={id}
@@ -39,14 +39,14 @@ const Index = ({ data }) => {
               date={date}
               excerpt={excerpt}
             />
-          );
+          )
         })}
       </PostWrapper>
     </Layout>
-  );
-};
+  )
+}
 
-export default Index;
+export default Index
 
 Index.propTypes = {
   data: PropTypes.shape({
@@ -60,20 +60,24 @@ Index.propTypes = {
               path: PropTypes.string.isRequired,
               title: PropTypes.string.isRequired,
               date: PropTypes.string.isRequired,
-              tags: PropTypes.array,
             }),
           }),
         }).isRequired
       ),
     }),
   }),
-};
+}
 
 export const query = graphql`
   query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
     allMarkdownRemark(
       limit: 6
-      sort: { order: DESC, fields: [frontmatter___date] }
+      sort: { order: ASC, fields: [frontmatter___date] }
     ) {
       edges {
         node {
@@ -82,16 +86,11 @@ export const query = graphql`
           frontmatter {
             title
             path
-            tags
             date(formatString: "MM.DD.YYYY")
             cover {
               childImageSharp {
-                fluid(
-                  maxWidth: 1000
-                  quality: 90
-                  traceSVG: { color: "#2B2B2F" }
-                ) {
-                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                fluid(maxWidth: 1000, quality: 90) {
+                  ...GatsbyImageSharpFluid_withWebp
                 }
               }
             }
@@ -100,4 +99,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`

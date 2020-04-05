@@ -1,4 +1,4 @@
-const config = require('./config/site');
+const config = require('./config/site')
 
 module.exports = {
   siteMetadata: {
@@ -19,6 +19,7 @@ module.exports = {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
+          `gatsby-remark-embedder`,
           {
             resolve: 'gatsby-remark-images',
             options: {
@@ -62,4 +63,4 @@ module.exports = {
     },
     'gatsby-plugin-offline',
   ],
-};
+}
