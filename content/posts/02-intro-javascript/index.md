@@ -317,4 +317,8 @@ dog.name.nickName = 'Sir Remington'
 
 🚨PROJECT TIME🚨
 
+**🧘🏽‍♂️ The Warmup**: Use an object to describe yourself. Try to use all of the data types that we've covered so far.
+
+**🏋🏽‍♀️ The Challenge**
+
 Using our newfound knowledge of complex data structures, refactor the previous trivia game to clean up the code a bit.
