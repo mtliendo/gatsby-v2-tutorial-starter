@@ -57,7 +57,7 @@ The rule of thumb, and the convention that we'll be using in this course: Define
 
 ## JavaScript Types
 
-In the above examples, I casually introduced you to three of JavaScript's types: `string`, `number`, and `boolean`. These are known as _primitive types_.
+In the above examples, I casually introduced you to three of JavaScript's types: `string`, `number`, `boolean`, and `undefined`. These are known as _primitive types_.
 
 ### Understanding Primitive Types in JavaScript
 
@@ -66,7 +66,9 @@ The main thing to know about primitive types--commonly referred to as "basic typ
 To get a better understanding of what I mean, let's look at an example:
 
 ```js
-let food = 'tacos'
+let food //food is declared, but currently has a value of "undefined"
+
+food = 'tacos' //food is assigned a vlue
 
 const myFavoriteFood = food // myFavoriteFood now equals "taco"
 
@@ -175,3 +177,144 @@ Let's build a trivia game where the user has to guess the answer to 5 (easy) que
 To get started, feel free to fork the sandbox below
 
 https://codesandbox.io/s/trivia-with-basic-types-starter-w0j8j
+
+<details>
+  <summary><b>After giving it your best shot, click here to see how I would tackle it.</b></summary>
+  <iframe
+     src="https://codesandbox.io/embed/trivia-with-basic-types-final-tv3xg?fontsize=14&hidenavigation=1&theme=dark"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="trivia-with-basic-types-final"
+     allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media; usb"
+     sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
+   ></iframe>
+</details>
+<br/>
+
+---
+
+☕ We just tackled a lot, in a short amount of time! Now's a good time to take a break!☕
+
+## Complex Data Types
+
+Now that we have a grasp on control flow and primitive types, we can take it to the next level and learn about arrays, objects, and functions!
+
+### Arrays
+
+An array is simply put as a collection of items. Commonly known as a "list" in other programming languages, arrays are denoted by the use of brackets `[ ]`
+
+So if I wanted a list of names, I could say
+
+```js
+const names = ['Michael', 'Kendall', 'Remmy', 'Xavier']
+```
+
+> 🗒️ Note that while JavaScript doesn't care about what types of data you put in an array, it's common to keep them all the same type.
+
+**Accessing Items**
+
+You're likely to hear the phrase, "array's are index based". What this means is that to access an item in an array, you reference it by its location. However, it's important to note that arrays are index-based.
+
+As always, let's take a look at an example:
+
+```js
+const foods = ['tacos', 'fruit snacks', 'filet mignon']
+
+const myFavoriteFood = foods[0]
+const myGuiltyPleasure = foods[1]
+const foodImBuyingAfterQuarantine = foods[2]
+```
+
+**Updating Items**
+
+Updating Array values is fairly straight forward since the items themselves are primitive values:
+
+```js
+const legalSmokingAges = [18, 25, 40]
+legalSmokingAges[0] = 21
+```
+
+> 🗒️ Removing and adding items will be discussed in the next module.
+
+> 🗒️ The convention for naming array variables is that they are plural, or that they end in "List", avoid ambiguous names like "a" or "myArray".
+
+### Objects
+
+While we're talking about food, note that objects are the bread and butter of JavaScript development.
+
+![oprah saying everything is an object](./object-oprah.jpg)
+
+What kind of type is an array...an object.
+
+What kind of type is a function...an object.
+
+When expressing "nothing" we say `null`, and what is its type... you guessed it.
+
+Objects are used to hold pieces of related information and are called "dictionaries" in other languages. This is because they work in a `key: value` fashion, similar to how a dictionary has a `word:definition`.
+
+**"Pieces of related information?"**
+
+Where arrays are simply containers to list any kind of data, objects are best used when the data has attributes. Take a person for example:
+
+While we could create a person like so:
+
+```js
+❌
+const person = ['brown eyes', 'dark hair', 'tall' ]
+```
+
+note that this breaks our convention since it doesn't end in an "s" or "list".
+
+An object is best used in this case.
+
+```js
+✅
+const person = {
+  eyes: "brown",
+  hair: "dark",
+  height: "tall"
+}
+```
+
+Just like array, the values in objects can hold any kind of data:
+
+```js
+const dog = {
+  breed: 'Chocolate lab',
+  age: 1,
+  barksAlot: true,
+  hobbies: ['barking', 'eating my sons toys', 'giving snuggles'],
+  name: {
+    firstName: 'Remmy',
+    lastName: 'Liendo',
+    nickName: "Don't chew that!",
+  },
+}
+```
+
+As you can see, object are very versatile in JavaScript! To access an objects values, we use _dot-notation_.
+
+```js
+const myDogsName = dog.name.firstName
+const myDogsAge = dog.age
+```
+
+<details>
+  <summary><b>How would you access the last hobby? Click here for the answer.</b></summary>
+  <pre class="language-js"><code class="language-js">const myDogsBestQuality = dog.hobbies[2]</code></pre>
+</details>
+
+**Updating Items**
+
+Updating objects follows the same rules as arrays (remember, arrays are jus a special type of object):
+
+```js
+dog.name.nickName = 'Sir Remington'
+```
+
+> 🗒️ Removing and adding items will be discussed in the next module.
+
+---
+
+🚨PROJECT TIME🚨
+
+Using our newfound knowledge of complex data structures, refactor the previous trivia game to clean up the code a bit.
