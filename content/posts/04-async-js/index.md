@@ -97,7 +97,12 @@ https://codesandbox.io/s/mobiesearch-tu44d?file=/src/index.js
 
 4. Random User API -- https://randomuser.me/api/
 5. Giphy -- https://developers.giphy.com/docs/api/endpoint#search (create app for api key)
+
    - single gif from user
    - Giphy multiple gifs from user
-   - Giphy user sets word and amount
-   - User as delete button
+   - Giphy user sets word and amount (two input fields)
+   - User has delete button so they can delete a particular gif
+
+   If needing some inspiration of what can be done, I put together a small project for you to checkout by clicking on the link below:
+
+   https://csb-krmsm.netlify.com/
