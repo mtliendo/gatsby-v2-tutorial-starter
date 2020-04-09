@@ -1,6 +1,6 @@
 ---
 id: 3
-path: '/pracical-js'
+path: '/practical-js'
 cover: './practical-javascript.jpg'
 title: 'Practical JavaScript'
 ---
