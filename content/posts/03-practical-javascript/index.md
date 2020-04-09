@@ -247,7 +247,7 @@ The project below will walk through the common scenarios, however I'll highlight
 
 If we want to create a new HTML element in JavaScript, we use `document.createElement('elementTag')`.
 
-> `const myImg = document.createElement('img')
+> `const myImg = document.createElement('img')`
 
 If we want to remove add the element to the page, we say `document.appendChild('elementTag')`
 
