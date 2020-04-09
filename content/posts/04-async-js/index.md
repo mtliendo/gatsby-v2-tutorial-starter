@@ -90,9 +90,14 @@ fetch('somewhere.com')
    https://codesandbox.io/s/fetch-intro-2jf5b
 
 3. OMDB API
-4. Random User API
-5. Giphy--single gif from user
 
+https://codesandbox.io/s/mobiesearch-tu44d?file=/src/index.js
+
+💡Project ideas:
+
+4. Random User API -- https://randomuser.me/api/
+5. Giphy -- https://developers.giphy.com/docs/api/endpoint#search (create app for api key)
+   - single gif from user
    - Giphy multiple gifs from user
    - Giphy user sets word and amount
    - User as delete button
