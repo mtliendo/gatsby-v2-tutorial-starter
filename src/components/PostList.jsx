@@ -59,13 +59,6 @@ const StyledLink = styled(Link)`
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0) 0%,
-      rgba(0, 0, 0, 0.3) 50%,
-      rgba(0, 0, 0, 0.7) 80%,
-      rgba(0, 0, 0, 0.8) 100%
-    );
     z-index: -10;
     border-radius: ${theme.borderRadius.default};
     transition: opacity ${theme.transitions.default.duration};
