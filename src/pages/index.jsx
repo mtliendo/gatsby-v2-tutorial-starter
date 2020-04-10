@@ -74,10 +74,7 @@ export const query = graphql`
         title
       }
     }
-    allMarkdownRemark(
-      limit: 6
-      sort: { order: ASC, fields: [frontmatter___id] }
-    ) {
+    allMarkdownRemark(sort: { order: ASC, fields: [frontmatter___id] }) {
       edges {
         node {
           id
