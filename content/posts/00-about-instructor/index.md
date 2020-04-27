@@ -7,8 +7,6 @@ title: 'About Your Instructor'
 
 # Know Your Instructor
 
-![me](./me-beard.jpeg)
-
 Hey hey 👋🏽
 
 I figure since you have to see me and listen to my voice for a while, you might as well get to know a bit about myself outside of this training!
