@@ -121,4 +121,4 @@ https://youtu.be/JvDmJybANCQ
 
 Feel free to develop in the below sandbox, just note that if you refresh the page, you'll lose all of you changes 😱 Instead, I recommend clicking the "Open Sandbox" button and when you get to the webpage, click the "Fork" button on the top-right corner.
 
-https://codesandbox.io/s/photo-viewer-starter-ks1jd
+https://codesandbox.io/s/photo-viewer-starter-ks1jd?file=/index.html
