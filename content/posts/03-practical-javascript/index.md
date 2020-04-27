@@ -1,7 +1,7 @@
 ---
 id: 3
 path: '/practical-js'
-cover: './practical-javascript.jpg'
+cover: './practical-javascript-preview.jpg'
 title: 'Practical JavaScript'
 ---
 

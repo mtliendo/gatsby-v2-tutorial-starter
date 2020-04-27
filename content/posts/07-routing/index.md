@@ -1,7 +1,7 @@
 ---
 id: 7
 path: '/routing'
-cover: './routing.jpg'
+cover: './routing-preview.jpg'
 title: 'Routing in React'
 ---
 

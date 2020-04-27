@@ -1,7 +1,7 @@
 ---
 id: 6
 path: '/react-hooks-1'
-cover: './react-hooks.jpg'
+cover: './react-hooks-preview.jpg'
 title: 'React Hooks Pt. 1'
 ---
 
