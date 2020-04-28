@@ -1,7 +1,7 @@
 ---
 id: 2
 path: '/intro-javascript'
-cover: './js-basics-preview.jpg'
+cover: './js-basics.jpg'
 title: 'Intro JavaScript'
 ---
 
