@@ -1,7 +1,7 @@
 ---
 id: 3
 path: '/practical-js'
-cover: './practical-javascript-preview.jpg'
+cover: './practical-javascript.jpg'
 title: 'Practical JavaScript'
 ---
 
@@ -74,7 +74,7 @@ const jdLawnTractors = [
 
 //❌ create a new variable based on the original
 const updatedList = jdLawnTractors
-updatedList[jdLTractors.length] = 'Liendo Master Deluxe'
+updatedList[jdLawnTractors.length] = 'Liendo Master Deluxe'
 
 //🙅🏽‍♂️ Create a new array by looping over the original array
 const updatedList = []
