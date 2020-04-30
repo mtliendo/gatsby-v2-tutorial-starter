@@ -1,7 +1,7 @@
 ---
 id: 4
 path: '/async-js'
-cover: './async-js-preview.jpg'
+cover: './async-js.jpg'
 title: 'Async JS'
 ---
 
