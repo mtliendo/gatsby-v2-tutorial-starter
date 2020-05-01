@@ -1,7 +1,7 @@
 ---
 id: 5
 path: '/react-basics'
-cover: './react-basics-preview.jpg'
+cover: './react-basics.jpg'
 title: 'React Basics'
 ---
 
