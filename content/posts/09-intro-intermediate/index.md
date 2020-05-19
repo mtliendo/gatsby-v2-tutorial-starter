@@ -84,3 +84,5 @@ https://codesandbox.io/s/promises-project-7q013
 🚨Homework: Challenge Area🚨
 
 ![quote-facts challenge](./async-assignment.png)
+
+https://codesandbox.io/s/async-homework-u7vyb?file=/src/index.js
