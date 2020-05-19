@@ -56,7 +56,7 @@ https://codesandbox.io/s/callback-order-zicmh?file=/src/index.js
 If the analogy for a callback is placing an order at a restaurant, the analogy for a promise is asking someone if they want to watch a movie.
 
 <p style='background: aliceblue; border-radius: 10px; display: inline-block; padding: 10px'>Me: Yo👋🏽 Want to see a movie tonight?</p>
-<p style='background: lightgrey; border-radius: 10px; display: inline-block; padding: 10px; margin-left: 20px'>You: Hmmm..maybe! Let me check my schedule. Promise to get back to you.</p>
+<p style='background: lightgrey; border-radius: 10px; display: inline-block; padding: 10px; margin-left: 10%'>You: Hmmm..maybe! Let me check my schedule. Promise to get back to you.</p>
 <p style='background: aliceblue; border-radius: 10px; display: inline-block; padding: 10px'>Me: Ok, I'll wait to hear back!</p>
 
 In the above situation, there're a couple ways this could turn out:
