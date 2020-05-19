@@ -22,22 +22,56 @@ const PostWrapper = styled.section`
 
 const Index = ({ data }) => {
   const { edges } = data.allMarkdownRemark
+  const beginnerCourses = edges.filter((edge, index) => index < 10)
+  const intermediateCourses = edges.filter((edge, index) => index >= 10)
+
   return (
     <Layout>
       <Helmet title={data.site.siteMetadata.title} />
-      <Header title={data.site.siteMetadata.title}>Beginner Track</Header>
+      <Header title={data.site.siteMetadata.title}>
+        A Michael Liendo Experience
+      </Header>
+      <h3 style={{ textAlign: 'center', marginTop: '10%' }}>Beginner Course</h3>
       <PostWrapper>
-        {edges.map(({ node }) => {
+        {beginnerCourses.map(({ node }, index) => {
           const { excerpt, frontmatter } = node
           const { cover, path, title, id } = frontmatter
+          console.log(index)
+          // dont return the about section or the uses section (first items)
+          if (index <= 1) return
+
           return (
-            <PostList
-              key={id}
-              cover={cover.childImageSharp.fluid}
-              path={path}
-              title={title}
-              excerpt={excerpt}
-            />
+            <>
+              <PostList
+                key={id}
+                cover={cover.childImageSharp.fluid}
+                path={path}
+                title={title}
+                excerpt={excerpt}
+              />
+            </>
+          )
+        })}
+      </PostWrapper>
+      <hr />
+      <h3 style={{ textAlign: 'center', marginTop: '5%' }}>
+        Intermediate Course
+      </h3>
+      <PostWrapper>
+        {intermediateCourses.map(({ node }) => {
+          const { excerpt, frontmatter } = node
+          const { cover, path, title, id } = frontmatter
+
+          return (
+            <>
+              <PostList
+                key={id}
+                cover={cover.childImageSharp.fluid}
+                path={path}
+                title={title}
+                excerpt={excerpt}
+              />
+            </>
           )
         })}
       </PostWrapper>
