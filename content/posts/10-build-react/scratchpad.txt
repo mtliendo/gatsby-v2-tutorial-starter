@@ -1,0 +1,51 @@
+//stateful component in react--no jsx:
+
+const e = React.createElement
+
+class Counter extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = { count: 0 }
+  }
+
+  render() {
+    return e(
+      'button',
+      { onClick: () => this.setState({ count: this.state.count + 1 }) },
+      this.state.count
+    )
+  }
+}
+
+const domContainer = document.querySelector('#root')
+ReactDOM.render(e(Counter), domContainer)
+
+// Babel code
+
+//   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+//   <script type="text/babel" src="app.js"></script>
+
+/////////////// BABEL ///////////////////
+
+1. npm install --save-dev @babel/core @babel/cli
+
+/////////// WEbpack/////////////////////
+
+1. create a webpack.config.js
+2. add the following
+
+const path = require('path');
+
+module.exports = {
+  entry: './src/index.js',
+  output: {
+    filename: 'main.js',
+    path: path.resolve(__dirname, 'dist'),
+  },
+};
+
+3. Add a script to run webpack
+
+"build": "webpack"
+
+4. setup babel to use react and our preset env

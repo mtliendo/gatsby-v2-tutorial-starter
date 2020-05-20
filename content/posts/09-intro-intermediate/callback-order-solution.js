@@ -15,7 +15,7 @@ const placeOrder = (foodItems, callback) => {
 }
 
 //step 1
-placeOrder(['bat', 'large caesar salad'], (err, food) => {
+placeOrder(['chicken', 'large caesar salad'], (err, food) => {
   if (err) {
     console.log(
       `Sorry, can you order something else the ${err} is out of stock.`
