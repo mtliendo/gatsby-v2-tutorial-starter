@@ -25,4 +25,4 @@ React Routing Basics can be found [here](/routing)
 
 Once done reading the above sections, a knowledge check can be made by going through the following project, and as a homework assignment trying to create a new route that is lazily loaded
 
-https://codesandbox.io/s/frosty-leaf-ubc76
+https://codesandbox.io/s/react-basics-knowledge-check-ubc76?file=/src/App.js
