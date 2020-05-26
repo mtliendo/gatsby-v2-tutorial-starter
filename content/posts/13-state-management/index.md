@@ -131,6 +131,8 @@ As always, let's take a look at an example:
 
 https://codesandbox.io/s/managing-form-state-context-starter-y9uv5?file=/src/pages/App.js
 
+🎉 Congrats on learning React Intermediate, from here on out we will be taking our knowledge to discuss advanced topics such as refactoring existing codebases and profiling applications for rendering leaks!
+
 🚨 Homework Assignment 🚨
 
 Given the sandbox below, perform the following:
