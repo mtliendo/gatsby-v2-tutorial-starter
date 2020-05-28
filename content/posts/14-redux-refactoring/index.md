@@ -111,3 +111,11 @@ In this simple todo app, after reviewing it's current architecture, we'll take t
 https://codesandbox.io/s/redux-todo-starter-class-p33bu?file=/src/index.js
 
 🗒️ Note that the redux version of this project is taken directly from the redux docs. If wanting to explore the sandbox in its original state, visit it [here](https://codesandbox.io/s/redux-todo-65271)
+
+## Final Thoughts
+
+![convo.png](./convo.png)
+
+This section contains a lot of the core knowledge needed to create large scale applications that don't get unweildy as the grow. However it's important to note that a common bottleneck in any large organization is that those leading the development have many responsibilities.
+
+As such it's our responsibility to take what we know and pass it on to our team members, managers and colleagues. Only in doing so can we ensure a learning culture where we grow as a unit and with transparency.
